@@ -1,3 +1,5 @@
+/* ================================= Font ================================= */
+
 @font-face {
     font-family: "manrope";
     src: url("../fonts/Manrope[wght].woff2") format("woff2");
@@ -5,6 +7,7 @@
     font-style: normal;
     font-display: swap;
 }
+/* ================================= Variables ================================= */
 
 :root {
     /* Colors */
@@ -25,6 +28,7 @@
     --text-body-large: 400 20px / 32px var(--font-family);
     --text-body: 400 16px / 28px var(--font-family);
     --text-caption: 500 14px / 22px var(--font-family);
+    --text-button: 600 16px / 24px var(--font-family);
 
     /* Spacing */
     --space-1: 4px;
@@ -49,13 +53,14 @@
      /* Grid */
     --grid-columns: 12;
     --grid-gutter: 24px;
-    --grid-margin: 96px;
-    --container-width: 1248px; /* 1440 - after landing */
+    --container-width: 1248px; /* set 1440 after landing */
     --grid-margin: 96px;
 
     /* Transition */
     --transition-fast: 0.3s ease;
 }
+
+/* ================================= Reset ================================= */
 
 * {
     box-sizing: border-box;
@@ -73,6 +78,8 @@ body {
     font-family: var(--font-family);
 }
 
+/* ================================= Layout ================================= */
+
 .container {
     width: min(
         calc(100% - (var(--grid-margin) * 2)),
@@ -82,19 +89,90 @@ body {
     margin-inline: auto;
 }
 
-a {
-    text-decoration: none;
-}
-
 img {
     display: block;
     max-width: 100%;
 }
 
-/* HEADER */
+/* ================================= Typography ================================= */
+
+h1 {
+    font: var(--text-h1);
+}
+
+h2 {
+    font: var(--text-h2);
+}
+
+h3 {
+    font: var(--text-h3);
+}
+
+p {
+    font: var(--text-body-large);
+    color: var(--color-text-secondary)
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ================================= Components ================================= */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 24px;
+
+    font: var(--text-button);
+
+    border-radius: var(--radius-md);
+
+    transition: var(--transition-fast);
+
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--color-text-primary);
+    outline-offset: 2px;
+}
+
+.button--outline {
+    background-color: var(--color-background);
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+}
+
+.button--outline:hover {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    transition: var(--transition-fast);
+}
+
+/* ================================= Sections ================================= */
+
+/*================= Header =================*/
 
 .header {
     padding-block: var(--space-6);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-background);
 }
 
 .header__inner {
@@ -115,4 +193,43 @@ img {
 .nav a {
     font: var(--text-body);
     color: var(--color-text-secondary);
+}
+
+/*================= Hero =================*/
+
+.hero {
+    padding-block: var(--space-8);
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+}
+
+.hero__content {
+    grid-column: span 4;
+}
+
+.hero__actions {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.hero__image {
+    grid-column: span 8;
+    justify-self: end;
+    padding-left: var(--grid-gutter);
+    overflow: hidden;
+}
+
+.hero__image img {
+    border-radius: var(--radius-md);
+}
+
+.hero__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-6);
+    font: var(--text-caption);
 }
