@@ -16,21 +16,14 @@
     --color-border: #E6E2DB;
 
     /* Typography */
-
     --font-family: "Manrope", sans-serif;
 
     --text-display: 800 72px / 80px var(--font-family);
-
     --text-h1: 700 56px / 64px var(--font-family);
-
     --text-h2: 700 40px / 48px var(--font-family);
-
     --text-h3: 600 28px / 36px var(--font-family);
-
     --text-body-large: 400 20px / 32px var(--font-family);
-
     --text-body: 400 16px / 28px var(--font-family);
-
     --text-caption: 500 14px / 22px var(--font-family);
 
     /* Spacing */
@@ -90,7 +83,6 @@ body {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
 }
 
