@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Nordform — Architecture Studio</title>
-    <meta
-        name="description"
-        content="Nordform Architects creates residential and commercial spaces where simplicity, functionality and timeless aesthetics work together."
-    >
+    <meta name="description"
+        content="Nordform Architects creates residential and commercial spaces where simplicity, functionality and timeless aesthetics work together.">
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -26,8 +27,8 @@
             </a>
 
             <nav class="nav">
-                <a href="#projects">Projects</a>
                 <a href="#about">About</a>
+                <a href="#projects">Projects</a>
                 <a href="#contact">Contacts</a>
             </nav>
 
@@ -72,10 +73,7 @@
 
                 <div class="hero__image">
 
-                    <img
-                        src="assets/images/hero.png"
-                        alt="Contemporary residential house in the forest"
-                    >
+                    <img src="assets/images/hero.webp" alt="Contemporary residential house in the forest">
 
                 </div>
 
@@ -106,10 +104,7 @@
 
                     <div class="about__image">
 
-                        <img
-                            src="assets/images/about.png"
-                            alt="Contemporary architectural interior"
-                        >
+                        <img src="assets/images/about.webp" alt="Contemporary architectural interior">
 
                     </div>
 
@@ -191,32 +186,31 @@
 
 
         <!-- PROJECTS -->
+
         <section class="projects" id="projects">
 
             <div class="container">
 
-                <div class="section-header">
+                <div class="projects__header">
 
-                    <div class="section-header__title">
-
+                    <div class="projects__title">
                         <p class="eyebrow">
                             PROJECTS
                         </p>
 
-                        <h2>
+                        <h1>
                             Selected<br>
                             Works
-                        </h2>
-
+                        </h1>
                     </div>
 
 
-                    <div class="section-header__content">
+                    <div class="projects__intro">
 
                         <p>
-                            Each project reflects a careful
-                            balance between architecture,
-                            landscape and everyday living.
+                            Each project reflects a careful balance
+                            between architecture, landscape and
+                            everyday living.
                         </p>
 
                         <a href="#" class="button">
@@ -230,192 +224,121 @@
 
                 <div class="projects__grid">
 
-                    <!-- PROJECT 1 -->
-                    <article class="project project--large">
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <img src="assets/images/forest-house.webp" alt="Forest house">
+                        </div>
+                        <div class="project-card__info">
+                            <div>
+                                <h3>
+                                    Forest house
+                                </h3>
+                                <span class="project-card__type">
+                                    PRIVATE RESIDENCE
+                                </span>
+                            </div>
+                            <span class="project-card__location">
+                                Stockholm, Sweden
+                            </span>
+                        </div>
+                    </article>
 
-                        <a href="#">
+                    <article class="project-card">
 
-                            <div class="project__image">
+                        <div class="project-card__image">
+                            <img src="assets/images/open-horizon.webp" alt="Open Horizon">
+                        </div>
 
-                                <img
-                                    src="assets/images/project-1.jpg"
-                                    alt="Forest house"
-                                >
+                        <div class="project-card__info">
 
+                            <div>
+                                <h3>Open Horizon</h3>
+
+                                <span class="project-card__type">
+                                    PRIVATE RESIDENCE
+                                </span>
                             </div>
 
+                            <span class="project-card__location">
+                                Copenhagen, Denmark
+                            </span>
 
-                            <div class="project__info">
-
-                                <div>
-                                    <h3>
-                                        Forest house
-                                    </h3>
-
-                                    <span>
-                                        PRIVATE RESIDENCE
-                                    </span>
-                                </div>
-
-                                <p>
-                                    Stockholm, Sweden
-                                </p>
-
-                            </div>
-
-                        </a>
+                        </div>
 
                     </article>
 
 
-                    <!-- PROJECT 2 -->
-                    <article class="project project--large">
+                    <article class="project-card">
 
-                        <a href="#">
+                        <div class="project-card__image">
+                            <img src="assets/images/coastal-retreat.webp" alt="Coastal Retreat">
+                        </div>
 
-                            <div class="project__image">
+                        <div class="project-card__info">
 
-                                <img
-                                    src="assets/images/project-2.jpg"
-                                    alt="Open horizon"
-                                >
+                            <div>
+                                <h3>Coastal Retreat</h3>
 
+                                <span class="project-card__type">
+                                    PRIVATE RESIDENCE
+                                </span>
                             </div>
 
+                            <span class="project-card__location">
+                                Mallorca, Spain
+                            </span>
 
-                            <div class="project__info">
-
-                                <div>
-                                    <h3>
-                                        Open horizon
-                                    </h3>
-
-                                    <span>
-                                        PRIVATE RESIDENCE
-                                    </span>
-                                </div>
-
-                                <p>
-                                    Copenhagen, Denmark
-                                </p>
-
-                            </div>
-
-                        </a>
+                        </div>
 
                     </article>
 
 
-                    <!-- PROJECT 3 -->
-                    <article class="project">
+                    <article class="project-card">
 
-                        <a href="#">
+                        <div class="project-card__image">
+                            <img src="assets/images/nordform-studio.webp" alt="Nordform Studio">
+                        </div>
 
-                            <div class="project__image">
+                        <div class="project-card__info">
 
-                                <img
-                                    src="assets/images/project-3.jpg"
-                                    alt="Coastal Retreat"
-                                >
+                            <div>
+                                <h3>Nordform Studio</h3>
 
+                                <span class="project-card__type">
+                                    CREATIVE STUDIO
+                                </span>
                             </div>
 
+                            <span class="project-card__location">
+                                Stockholm, Sweden
+                            </span>
 
-                            <div class="project__info">
-
-                                <div>
-                                    <h3>
-                                        Coastal Retreat
-                                    </h3>
-
-                                    <span>
-                                        PRIVATE RESIDENCE
-                                    </span>
-                                </div>
-
-                                <p>
-                                    Gotland, Sweden
-                                </p>
-
-                            </div>
-
-                        </a>
+                        </div>
 
                     </article>
 
 
-                    <!-- PROJECT 4 -->
-                    <article class="project">
+                    <article class="project-card">
 
-                        <a href="#">
+                        <div class="project-card__image">
+                            <img src="assets/images/urban-living.webp" alt="Urban Living">
+                        </div>
 
-                            <div class="project__image">
+                        <div class="project-card__info">
 
-                                <img
-                                    src="assets/images/project-4.jpg"
-                                    alt="Nordform Studio"
-                                >
+                            <div>
+                                <h3>Urban Living</h3>
 
+                                <span class="project-card__type">
+                                    RESIDENTIAL
+                                </span>
                             </div>
 
+                            <span class="project-card__location">
+                                Copenhagen, Denmark
+                            </span>
 
-                            <div class="project__info">
-
-                                <div>
-                                    <h3>
-                                        Nordform Studio
-                                    </h3>
-
-                                    <span>
-                                        COMMERCIAL
-                                    </span>
-                                </div>
-
-                                <p>
-                                    Stockholm, Sweden
-                                </p>
-
-                            </div>
-
-                        </a>
-
-                    </article>
-
-
-                    <!-- PROJECT 5 -->
-                    <article class="project">
-
-                        <a href="#">
-
-                            <div class="project__image">
-
-                                <img
-                                    src="assets/images/project-5.jpg"
-                                    alt="Urban Living"
-                                >
-
-                            </div>
-
-
-                            <div class="project__info">
-
-                                <div>
-                                    <h3>
-                                        Urban Living
-                                    </h3>
-
-                                    <span>
-                                        RESIDENCE
-                                    </span>
-                                </div>
-
-                                <p>
-                                    Oslo, Norway
-                                </p>
-
-                            </div>
-
-                        </a>
+                        </div>
 
                     </article>
 
@@ -431,10 +354,8 @@
 
             <div class="container feature-image__inner">
 
-                <img
-                    src="assets/images/feature.jpg"
-                    alt="Contemporary architectural courtyard with a pool"
-                >
+                <img class="feature-image__img" src="assets/images/feature-pool.webp"
+                    alt="Contemporary architectural courtyard">
 
                 <p class="feature-image__caption">
                     Architecture<br>
@@ -605,8 +526,6 @@
 
     </footer>
 
-
-    <script src="assets/js/script.js"></script>
-
 </body>
+
 </html>
