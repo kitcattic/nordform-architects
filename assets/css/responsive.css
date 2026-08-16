@@ -27,8 +27,7 @@
     }
 
     .logo {
-        font-size: 24px;
-        line-height: 32px;
+        font: var(--text-mobile-h3);
     }
 
     .nav {
