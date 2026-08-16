@@ -1,0 +1,222 @@
+/* ================================= Mobile ================================= */
+
+@media (max-width: 768px) {
+    :root {
+        --text-mobile-display: 700 36px / 42px var(--font-family);
+        --text-mobile-h2: 700 32px / 40px var(--font-family);
+        --text-mobile-h1: 700 36px / 42px var(--font-family);
+        --text-mobile-h3: 600 24px / 32px var(--font-family);
+
+        --grid-margin: 24px;
+    }
+
+    /*================= Header =================*/
+
+    .header {
+        padding-block: var(--space-3);
+    }
+
+    .logo {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        border: none;
+        background: none;
+        font: 28px var(--font-family);
+        cursor: pointer;
+    } 
+
+    /*================= Hero =================*/
+
+    .hero__inner {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-7);
+    }
+
+    .hero__content,
+    .hero__image {
+        grid-column: auto;
+    }
+
+    .hero__image {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .hero__content h1 {
+        font: var(--text-mobile-display);
+    }
+
+    .hero__description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /*================= About =================*/
+
+    .about {
+        padding-block: var(--space-7);
+    }
+
+    .about__inner {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+
+    .about__image {
+        width: 100%;
+    }
+
+    .about__content {
+        width: 100%;
+        padding-left: 0;
+
+        gap: var(--space-4);
+    }
+
+    .about__content h2 {
+        font: var(--text-mobile-h2);
+    }
+
+    .about__description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+
+        margin-top: var(--space-7);
+    }
+
+    .stat {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .stat:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--color-accent);
+        padding-bottom: var(--space-5);
+    }
+
+    .stat__number {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    /*================= Projects =================*/
+
+    .projects {
+        padding-block: var(--space-7);
+    }
+
+    .projects__header {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-5);
+        margin-bottom: var(--space-7);
+    }
+
+    .projects__title h2 {
+        font: var(--text-mobile-h1);
+    }
+
+    .projects__intro {
+        width: 100%;
+        margin-top: 0;
+        gap: var(--space-5);
+    }
+
+    .projects__intro p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .projects__grid {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-7);
+    }
+
+    .project-card,
+    .project-card:nth-child(1),
+    .project-card:nth-child(2),
+    .project-card:nth-child(n + 3) {
+        width: 100%;
+        grid-column: auto;
+    }
+
+    .project-card__image img {
+        width: 100%;
+    }
+
+    .project-card__info {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: var(--space-4);
+    }
+
+    .project-card h3 {
+        font: var(--text-mobile-h3);
+    }
+
+    .project-card__location {
+        max-width: 180px;
+        text-align: right;
+    }
+
+    /*================= Footer =================*/
+
+    .footer__top {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-7);
+    }
+
+    .footer__brand,
+    .footer__column,
+    .footer__cta {
+        width: 100%;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    .footer__bottom > div {
+        gap: var(--space-5);
+    }
+
+    /*================= Feature Image =================*/
+
+    .feature-image {
+        padding-block: var(--space-7);
+    }
+
+    .feature-image__inner {
+        aspect-ratio: 4 / 3;
+    }
+
+    .feature-image__caption {
+        right: var(--space-4);
+        bottom: var(--space-4);
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
