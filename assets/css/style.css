@@ -20,7 +20,7 @@
     --color-border: #E6E2DB;
 
     /* Typography */
-    --font-family: "Manrope", sans-serif;
+    --font-family: "manrope", sans-serif;
 
     --text-display: 800 72px / 80px var(--font-family);
     --text-h1: 700 56px / 64px var(--font-family);
@@ -159,7 +159,7 @@ a {
     background-color: var(--color-background);
     color: var(--color-accent);
     border: 2px solid var(--color-accent);
-    
+
     transition: var(--transition-fast);
 }
 
@@ -250,12 +250,37 @@ a {
 
 .hero__image {
     grid-column: span 7;
-    justify-self: end;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
     overflow: hidden;
 }
 
-.hero__image img {
-    border-radius: var(--radius-md);
+.hero-slide{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+
+    transform: scale(1.05);
+    transition:
+        opacity 1s ease,
+        transform 6s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    position: relative;
+    transform: scale(1);
 }
 
 .hero__meta {
@@ -345,8 +370,8 @@ a {
 }
 
 .projects__header {
-    display:grid;
-    grid-template-columns: repeat(12,1fr);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 
     gap: var(--space-7);
     margin-bottom: var(--space-6);
@@ -451,7 +476,6 @@ a {
     height: 100%;
 
     object-fit: cover;
-    border-radius: var(--radius-md);
 }
 
 .feature-image__caption {
@@ -562,8 +586,7 @@ a {
     color: var(--color-text-secondary);
 }
 
-.footer__bottom > div {
+.footer__bottom>div {
     display: flex;
     gap: var(--space-6);
 }
-
