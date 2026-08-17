@@ -173,7 +173,7 @@ a {
 /*================= Header =================*/
 
 .header {
-    padding-block: var(--space-6);
+    padding-block: var(--space-4);
 
     position: sticky;
     top: 0;
@@ -259,6 +259,7 @@ a {
     position: relative;
     width: 100%;
     overflow: hidden;
+    border-radius: var(--radius-md);
 }
 
 .hero-slide{

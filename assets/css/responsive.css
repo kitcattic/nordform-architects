@@ -1,9 +1,102 @@
+/* ================================= Tablets ================================= */
+
+@media (max-width:1100px) {
+
+    :root {
+        --grid-margin: 24px;
+
+        --text-display: 800 56px / 64px var(--font-family);
+        --text-h1: 700 44px / 52px var(--font-family);
+        --text-h2: 700 36px / 44px var(--font-family);
+        --text-h3: 600 24px / 32px var(--font-family);
+        --text-body-large: 400 18px / 28px var(--font-family);
+        --text-body: 400 16px / 24px var(--font-family);
+    }
+
+    .hero__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__image {
+        order: -1;
+    }
+
+    .hero__content h1 {
+        font-size: 64px;
+        line-height: 1.05;
+        max-width: 700px;
+    }
+
+    .about__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__content h2 {
+        font-size: 56px;
+        line-height: 1.05;
+        max-width: 700px;
+    }
+
+    .projects__header {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .project-card:nth-child(1) {
+        grid-column: span 12;
+    }
+
+    .project-card:nth-child(n + 2) {
+        grid-column: span 6;
+    }
+
+    .projects__header h2 {
+        max-width: 500px;
+    }
+
+    .projects__intro {
+        max-width: 500px;
+    }
+}
+
+@media (max-width:900px) {
+
+    :root {
+        --grid-margin: 12px;
+    }
+
+    .hero__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__image {
+        order: -1;
+    }
+
+    .hero__content h1 {
+        font-size: 56px;
+    }
+
+    .about__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__content h2 {
+        font-size: 48px;
+    }
+}
+
 /* ================================= Mobile ================================= */
 
 @media (max-width: 768px) {
     :root {
         --font-family: "manrope", sans-serif;
-        
+
         --text-mobile-display: 700 36px / 42px var(--font-family);
         --text-mobile-h2: 700 32px / 40px var(--font-family);
         --text-mobile-h1: 700 36px / 42px var(--font-family);
@@ -20,7 +113,7 @@
         border-radius: 8px;
     }
 
-    /*================= Header =================*/ 
+    /*================= Header =================*/
 
     .header {
         padding-block: var(--space-3);
@@ -68,8 +161,12 @@
         order: 1;
     }
 
+    .hero-slider {
+        border-radius: 0;
+    }
+
     .hero-slider img {
-        border-radius:0;
+        border-radius: 0;
     }
 
     .hero__content h1 {
