@@ -12,12 +12,12 @@
 
 :root {
     /* Colors */
-    --color-background: #F7F6F2;
-    --color-surface: #FFFFFF;
-    --color-text-primary: #1F1F1F;
-    --color-text-secondary: #6E6E6E;
-    --color-accent: #9A8F7A;
-    --color-border: #E6E2DB;
+    --color-background: #f7f6f2;
+    --color-surface: #ffffff;
+    --color-text-primary: #1f1f1f;
+    --color-text-secondary: #6e6e6e;
+    --color-accent: #9a8f7a;
+    --color-border: #e6e2db;
 
     /* Typography */
     --font-family: "manrope", sans-serif;
@@ -62,6 +62,20 @@
     --transition-fast: 0.3s ease;
 }
 
+/* ================================= Animathions ================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ================================= Reset ================================= */
 
 * {
@@ -81,6 +95,25 @@ body {
     font-size: 16px;
 }
 
+#about,
+#projects,
+#contact {
+    scroll-margin-top: 100px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ================================= Layout ================================= */
 
 ::selection {
@@ -89,8 +122,7 @@ body {
 }
 
 .container {
-    width: min(calc(100% - (var(--grid-margin) * 2)),
-            var(--container-width));
+    width: min(calc(100% - (var(--grid-margin) * 2)), var(--container-width));
 
     margin-inline: auto;
 }
@@ -115,7 +147,7 @@ h3 {
 }
 
 p {
-    color: var(--color-text-secondary)
+    color: var(--color-text-secondary);
 }
 
 a {
@@ -179,6 +211,10 @@ a {
     top: 0;
     z-index: 100;
     background-color: var(--color-background);
+
+    background-color: rgba(247, 246, 242, 0.85);
+    backdrop-filter: blur(12px);
+    transition: var(--transition-fast);
 }
 
 .header__inner {
@@ -204,7 +240,11 @@ a {
 .menu-toggle {
     display: none;
 
+    position: relative;
+    z-index: 101;
+
     width: 24px;
+    height: 20px;
     padding: 0;
 
     border: none;
@@ -214,12 +254,41 @@ a {
 }
 
 .menu-toggle span {
-    display: block;
+    position: absolute;
+    left: 0;
+
     width: 100%;
     height: 2px;
-    margin-block: 5px;
 
     background-color: var(--color-text-primary);
+
+    transition: 0.3s ease;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 9px;
+}
+
+.menu-toggle span:nth-child(3) {
+    bottom: 0;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    top: 9px;
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    bottom: 9px;
+    transform: rotate(-45deg);
 }
 
 /*================= Hero =================*/
@@ -235,6 +304,8 @@ a {
 }
 
 .hero__content {
+    animation: fadeUp 0.8s ease;
+
     grid-column: span 5;
 
     display: flex;
@@ -262,7 +333,7 @@ a {
     border-radius: var(--radius-md);
 }
 
-.hero-slide{
+.hero-slide {
     width: 100%;
     height: 100%;
     display: block;
@@ -417,6 +488,8 @@ a {
 .project-card {
     display: flex;
     flex-direction: column;
+
+    cursor: pointer;
 }
 
 .project-card__image {
@@ -429,6 +502,12 @@ a {
     width: 100%;
     aspect-ratio: 6 / 4;
     object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card__image img {
+    transform: scale(1.05);
 }
 
 .project-card__info {
@@ -587,7 +666,7 @@ a {
     color: var(--color-text-secondary);
 }
 
-.footer__bottom>div {
+.footer__bottom > div {
     display: flex;
     gap: var(--space-6);
 }
