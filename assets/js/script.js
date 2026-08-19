@@ -1,16 +1,46 @@
-/* Togge Menu */
+document.addEventListener("DOMContentLoaded", () => {
+    initScrollAnimation();
+    initHeroSlider();
+    initMenu();
+    initFeatureImage();
+});
+
+/* ================================= Scroll Animation ================================= */
+function initScrollAnimation() {
+    const elements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.15,
+        },
+    );
+
+    elements.forEach((element) => {
+        observer.observe(element);
+    });
+}
+
+/* ================================= Toggle Menu ================================= */
 function initMenu() {
     const button = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".nav");
-    const links = nav.querySelectorAll("a");
 
     if (!button || !nav) return;
+
+    const links = nav.querySelectorAll("a");
 
     function closeMenu() {
         button.classList.remove("active");
         nav.classList.remove("active");
         button.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
     }
 
     button.addEventListener("click", () => {
@@ -26,40 +56,7 @@ function initMenu() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    initHeroSlider();
-    initScrollAnimation();
-    initMenu();
-});
-
-/* Scroll Animathion */
-function initScrollAnimation() {
-    const elements = document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                }
-            });
-        },
-        {
-            threshold: 0.15,
-        },
-    );
-
-    elements.forEach((element) => {
-        observer.observe(element);
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    initHeroSlider();
-    initScrollAnimation();
-});
-
-/* Hero Slider */
+/* ================================= Hero Slider ================================= */
 function initHeroSlider() {
     const slider = document.querySelector(".hero-slider");
 
@@ -126,27 +123,27 @@ function initHeroSlider() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    initHeroSlider();
-});
+/* ================================= Feature Image ================================= */
+function initFeatureImage() {
+    const featureImageElement = document.querySelector(".feature-image__img");
 
-/* Feature Image */
-const featureImageElement = document.querySelector(".feature-image__img");
+    if (!featureImageElement) return;
 
-const featureImages = [
-    "assets/images/feature-pool.webp",
-    "assets/images/feature-model.webp",
-    "assets/images/feature-exterior.webp",
-];
+    const featureImages = [
+        "assets/images/feature-pool.webp",
+        "assets/images/feature-model.webp",
+        "assets/images/feature-exterior.webp",
+    ];
 
-let currentImage = 0;
+    let currentImage = 0;
 
-setInterval(() => {
-    currentImage++;
+    setInterval(() => {
+        currentImage++;
 
-    if (currentImage >= featureImages.length) {
-        currentImage = 0;
-    }
+        if (currentImage >= featureImages.length) {
+            currentImage = 0;
+        }
 
-    featureImageElement.src = featureImages[currentImage];
-}, 5000);
+        featureImageElement.src = featureImages[currentImage];
+    }, 5000);
+}
