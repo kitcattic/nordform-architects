@@ -19,8 +19,6 @@ function initMenu() {
         button.classList.toggle("active");
 
         button.setAttribute("aria-expanded", isOpen);
-
-        document.body.style.overflow = isOpen ? "hidden" : "";
     });
 
     links.forEach((link) => {
