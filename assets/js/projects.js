@@ -16,11 +16,21 @@ function initProjects() {
     function renderProjects(items) {
         grid.innerHTML = "";
 
-        items.forEach((project) => {
+        items.forEach((project, index) => {
             const card = document.createElement("article");
-
             card.className = "project-card--page";
 
+            let cardsPerRow = 3;
+
+            if (window.innerWidth <= 1100) {
+                cardsPerRow = 2;
+            }
+
+            if (window.innerWidth <= 900) {
+                cardsPerRow = 1;
+            }
+
+            card.style.animationDelay = `${Math.floor(index / cardsPerRow) * 0.1}s`;
             card.dataset.category = project.slug;
 
             card.innerHTML = `
