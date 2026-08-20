@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Nordform - Projects</title>
+        <meta
+            name="description"
+            content="Nordform Architects creates residential and commercial spaces where simplicity, functionality and timeless aesthetics work together."
+        />
+
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/script.js" defer></script>
+        <script src="assets/js/projects.js" defer></script>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container header__inner">
+                <a href="/" class="logo" aria-label="Nordform home">
+                    NORDFORM
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="site-navigation"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contacts</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="projects-hero">
+                <div class="container">
+                    <h1>
+                        Selected<br />
+                        Works
+                    </h1>
+
+                    <p class="projects-hero__description">
+                        A collection of residential and commercial projects
+                        where architecture, material and nature exist in
+                        balance.
+                    </p>
+                </div>
+            </section>
+
+            <section class="projects-list">
+                <div class="container">
+                    <div class="projects-filter">
+                        <button class="filter-button active" data-filter="all">
+                            All
+                        </button>
+
+                        <button class="filter-button" data-filter="residential">
+                            Residential
+                        </button>
+
+                        <button class="filter-button" data-filter="commercial">
+                            Commercial
+                        </button>
+
+                        <button class="filter-button" data-filter="interior">
+                            Interior
+                        </button>
+                    </div>
+
+                    <div class="projects-grid" id="projectsGrid"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer" id="contact">
+            <div class="container">
+                <div class="footer__top">
+                    <!-- BRAND -->
+                    <div class="footer__brand">
+                        <a href="/" class="logo" aria-label="Nordform home">
+                            NORDFORM
+                        </a>
+
+                        <p>
+                            Architecture shaped by light<br />
+                            and timeless spaces.
+                        </p>
+
+                        <div class="socials">
+                            <a href="#" aria-label="Instagram">
+                                <img
+                                    src="assets/icons/instagram.svg"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt=""
+                                />
+                            </a>
+
+                            <a href="#" aria-label="Pinterest">
+                                <img
+                                    src="assets/icons/pinterest.svg"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt=""
+                                />
+                            </a>
+
+                            <a href="#" aria-label="LinkedIn">
+                                <img
+                                    src="assets/icons/linkedin.svg"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SITE -->
+                    <div class="footer__column">
+                        <h3>SITE</h3>
+
+                        <a href="#"> Home </a>
+
+                        <a href="#projects"> Projects </a>
+
+                        <a href="#about"> About </a>
+
+                        <a href="#contact"> Contacts </a>
+                    </div>
+
+                    <!-- SERVICES -->
+                    <div class="footer__column">
+                        <h3>SERVICES</h3>
+
+                        <a href="#"> Residential </a>
+
+                        <a href="#"> Commercial </a>
+
+                        <a href="#"> Interior </a>
+
+                        <a href="#"> Consultation </a>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="footer__column">
+                        <h3>CONTACT</h3>
+
+                        <a href="mailto:info@nordform.studio">
+                            info@nordform.studio
+                        </a>
+
+                        <a href="tel:+46701234567"> +46 70 123 45 67 </a>
+
+                        <span> Stockholm, Sweden </span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="footer__cta">
+                        <p>
+                            Let’s create spaces<br />
+                            that stand the test of time.
+                        </p>
+
+                        <a href="#contact"> Let’s create together → </a>
+                    </div>
+                </div>
+
+                <!-- FOOTER BOTTOM -->
+                <div class="footer__bottom">
+                    <span> © 2026 Nordform Architects </span>
+
+                    <div>
+                        <a href="#"> Privacy Policy </a>
+
+                        <a href="#"> Terms of Service </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

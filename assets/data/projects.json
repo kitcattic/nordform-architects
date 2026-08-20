@@ -1,0 +1,110 @@
+[
+    {
+        "title": "Forest House",
+        "category": "RESIDENTIAL",
+        "slug": "residential",
+        "location": "Stockholm, Sweden",
+        "year": "2026",
+        "description": "A modern forest residence where natural materials and quiet spaces create a connection with nature.",
+        "image": "forest-house.webp"
+    },
+    {
+        "title": "Coastal Retreat",
+        "category": "RESIDENTIAL",
+        "slug": "residential",
+        "location": "Mallorca, Spain",
+        "year": "2026",
+        "description": "A coastal villa designed around light, open spaces and seamless indoor-outdoor living.",
+        "image": "coastal-retreat.webp"
+    },
+    {
+        "title": "Mountain Residence",
+        "category": "RESIDENTIAL",
+        "slug": "residential",
+        "location": "Swiss Alps, Switzerland",
+        "year": "2025",
+        "description": "A mountain home combining panoramic views, warm materials and minimalist architecture.",
+        "image": "mountain-residence.webp"
+    },
+    {
+        "title": "Lake Villa",
+        "category": "RESIDENTIAL",
+        "slug": "residential",
+        "location": "Finland",
+        "year": "2025",
+        "description": "A Scandinavian villa surrounded by forest and water, focused on simplicity and comfort.",
+        "image": "lake-villa.webp"
+    },
+    {
+        "title": "Desert Residence",
+        "category": "RESIDENTIAL",
+        "slug": "residential",
+        "location": "Arizona, USA",
+        "year": "2024",
+        "description": "A contemporary desert residence shaped by stone, sunlight and natural textures.",
+        "image": "desert-residence.webp"
+    },
+    {
+        "title": "Glass Pavilion",
+        "category": "RESIDENTIAL",
+        "slug": "residential",
+        "location": "Oslo, Norway",
+        "year": "2024",
+        "description": "A transparent architectural space designed to blend interior living with surrounding nature.",
+        "image": "glass-pavilion.webp"
+    },
+    {
+        "title": "Concrete Loft",
+        "category": "RESIDENTIAL",
+        "slug": "residential",
+        "location": "Berlin, Germany",
+        "year": "2023",
+        "description": "A bold concrete residence combining raw materials with refined modern details.",
+        "image": "concrete-loft.webp"
+    },
+    {
+        "title": "Nordform Studio",
+        "category": "COMMERCIAL",
+        "slug": "commercial",
+        "location": "Stockholm, Sweden",
+        "year": "2026",
+        "description": "A creative studio space designed for collaboration, focus and architectural expression.",
+        "image": "nordform-studio.webp"
+    },
+    {
+        "title": "Urban Living",
+        "category": "COMMERCIAL",
+        "slug": "commercial",
+        "location": "Copenhagen, Denmark",
+        "year": "2025",
+        "description": "A contemporary residential complex balancing urban life and natural elements.",
+        "image": "urban-living.webp"
+    },
+    {
+        "title": "Open Horizon",
+        "category": "INTERIOR",
+        "slug": "interior",
+        "location": "Copenhagen, Denmark",
+        "year": "2026",
+        "description": "A bright interior concept focused on openness, natural light and clean geometry.",
+        "image": "open-horizon.webp"
+    },
+    {
+        "title": "Minimal Apartment",
+        "category": "INTERIOR",
+        "slug": "interior",
+        "location": "Stockholm, Sweden",
+        "year": "2025",
+        "description": "A minimalist apartment interior built around calm colors, texture and functionality.",
+        "image": "minimal-apartment.webp"
+    },
+    {
+        "title": "Nordic Workspace",
+        "category": "INTERIOR",
+        "slug": "interior",
+        "location": "Helsinki, Finland",
+        "year": "2024",
+        "description": "A Nordic workspace designed to inspire creativity through simplicity and comfort.",
+        "image": "nordic-workspace.webp"
+    }
+]

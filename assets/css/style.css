@@ -172,6 +172,8 @@ a {
 
     background-color: var(--color-accent);
     color: var(--color-surface);
+
+    cursor: pointer;
 }
 
 .button:hover {
@@ -209,7 +211,7 @@ a {
 
     padding-block: var(--space-4);
 
-    background-color: transparent;
+    background: transparent;
     transition: var(--transition-fast);
 }
 
@@ -632,4 +634,115 @@ a {
 
 .footer a {
     cursor: not-allowed;
+}
+
+/* ================================= Projects Page ================================= */
+
+.projects-hero {
+    padding-block: var(--space-6);
+}
+
+.projects-hero h1 {
+    margin-top: var(--space-3);
+}
+
+.projects-hero__description {
+    max-width: 520px;
+    margin-top: var(--space-5);
+
+    font: var(--text-body-large);
+}
+
+.projects-filter {
+    display: flex;
+    gap: var(--space-5);
+
+    margin-bottom: var(--space-7);
+}
+
+.filter-button {
+    border: none;
+    background: transparent;
+
+    font: var(--text-body);
+
+    color: var(--color-text-secondary);
+
+    cursor: pointer;
+
+    transition: var(--transition-fast);
+}
+
+.filter-button:hover,
+.filter-button.active {
+    color: var(--color-text-primary);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--grid-gutter);
+}
+
+/* ================= Project Page Cards ================= */
+
+.project-card--page {
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+}
+
+.project-card--page__image {
+    overflow: hidden;
+
+    border-radius: var(--radius-md);
+}
+
+.project-card--page__image img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 6 / 4;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.project-card--page:hover .project-card--page__image img {
+    transform: scale(1.05);
+}
+
+.project-card--page__info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-4);
+
+    margin-top: var(--space-3);
+}
+
+.project-card--page h3 {
+    font: var(--text-h3);
+}
+
+.project-card--page__type {
+    display: block;
+
+    margin-top: var(--space-1);
+
+    font: var(--text-caption);
+
+    color: var(--color-accent);
+}
+
+.project-card--page__location {
+    max-width: 160px;
+
+    font: var(--text-caption);
+
+    color: var(--color-text-secondary);
+
+    text-align: right;
 }
